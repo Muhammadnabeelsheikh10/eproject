@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+     body{
+        background-color: var( --primary-color  );
+    }
+    *,
+    *:after,
+    *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+ 
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .column {
+        flex: 0 0 40%;
+        margin-top: 100px;
+    }
+    
+    .card {
+        border: 1px solid;
+        min-height: 100%;
+        position: relative;
+        background: black;
+        color: white;
+        text-transform: capitalize;
+        margin-top: 120px;
+        
+        transition: all 0.3s ease-out;
+    }
+    
+    .card .description-wrap {
+        padding: 105px 30px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .card .description {
+        color: var(  --primary-color);
+        text-align: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        font-size: 20px;
+        line-height: 1.4;
+        transition: all 0.5s ease-out;
+        overflow: auto;
+        transform: rotateY(100%);
+        opacity: 0;
+    }
+    
+    .card .description>* {
+        width: 100%;
+    }
+    
+    .card .description h3 {
+        margin: 0;
+        font-size: 26px;
+    }
+    
+    .card .description h4 {
+        margin: 0;
+    }
+    
+    .card .description ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        height: auto;
+    }
+    
+    .card .description ul li {
+        display: inline-block;
+        width: 40px;
+        margin: 0 10px;
+        transition: all 0.3s ease-out;
+        transform: perspective(1000px) rotateX(0deg);
+    }
+    
+    .card .description ul li:hover {
+        transform: perspective(1000px)rotateX(30deg);
+    }
+    
+    .card .description ul li i {
+        max-width: 100%;
+        line-height: 60px;
+        text-decoration: none;
+        color: var(  --primary-color);
+    }
+    
+    .pro-pic {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-50%);
+        background-size: cover;
+        background-position: center;
+        transition: all 0.5s ease-out;
+    }
+    
+    .card:hover .pro-pic {
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    
+    .card:hover {
+        border-radius: 50px;
+    }
+    
+    .card:hover .description {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    
+    .section {
+        height: auto;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    body{
+        padding: 0px;
+        margin: 0px;
+    
+    }
+    *{
+
+        padding: 0px;
+        margin: 0px;
+
+    }
+    header img{
+        position: relative;
+    }
+    .relatives{
+        background-image: url("images/askyourself");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: relative;
+       
+    }
+
+    .content{
+        position: absolute;
+        top: 100px;
+        left: 500px;
+        text-transform: uppercase;
+        color: #ddd;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .contents{
+        position: absolute;
+        top: 300px;
+        left: 250px;
+        font-size: 40px;
+        text-transform: capitalize;
+        color: whitesmoke;
+        padding-left: 50px;
+    }
+    @media(max-width:1100px){
+        .content h1{
+            transform: translateX(-100px);
+            
+        }
+        .contents p{
+            transform: translateX(-100px);
+            
+        }
+    }
+    @media(max-width:900px){
+        .content h1{
+            transform: translateX(-200px);
+            
+        }
+        .contents p{
+            transform: translateX(-100px);
+            
+        }
+    }
+    @media(max-width:700px){
+        .content h1{
+            transform: translateX(-300px);
+            
+        }
+        .contents p{
+            transform: translateX(-160px);
+            
+        }
+    }
+    @media(max-width:610px){
+        .content h1{
+            transform: translateX(-360px);
+            
+        }
+        .contents p{
+            transform: translateX(-200px);
+            width: 350px;
+            
+        }
+    }
+    @media(max-width:500px){
+        .content h1{
+            transform: translateX(-480px);
+            
+        }
+        .contents p{
+            transform: translateX(-480px);
+            
+        }
+    } 
+    @media(max-width:765px){
+        .col-md-6 img{
+            order: 1;
+
+        }
+        .about{
+            order: 2;
+        }
+    }
+  </style>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <header>
+        <div class="container-fluid m-0 p-0">
+        <img src="images/wendy-wright-mnoMGlqWDXM-unsplash.jpg" alt="" width="100%" height="300px">
+        <div class="content col-md-6">
+            <h1>about us</h1>
+        </div>
+        </div>
+    </header><br><br><br>
+    <div class="container-fluid pl-5 pr-5">
+        <div class="row">
+            <div class="col-md-6 about text-center">
+                <span class="h1  text-uppercase " style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;letter-spacing: 5px;">who we are</span><br><br><br>
+                <p class="text-capitalize h5 "  style="word-spacing: 5px">marine fleet started its sea operations in 2010, we became the next level cruise line and sea-water-adventure-sports company in Pakistan, with a growing community of 50,000 adventurous people.
+                    <br><br>
+                    Here in marine fleet, we have a straightforward mission, and that mission is to make sure your moments became memorable. We provide hospitality services on cruise ships with experiences that are worth celebrating.
+                    <br><br>
+                    Our sea routes are expanding, making us the first company to make the breaking news of cruising from Karachi till Gwadar in 2022.</p>
+
+            </div>
+            <div class="col-md-6">
+                <img src="images/team" alt="" width="100%" height="100%">
+            </div>
+        </div>
+
+    </div><br><br><br>
+    <div class="container-fluid relatives m-0 p-0">
+        <img src="images/askyourself" alt="" width="100%" height="500px">
+        <div class="contents h1">
+            <p>You probably ask yourself why us?</p>
+        </div>
+    </div><br><br>
+    <div class="container text-center">
+        <p class="text-capitalize h5 font-italic"  style="word-spacing: 5px">Well, that’s simple, we know sea routes, coastlines and understand the inner mechanisms of WoW – helping you with your Team Buildings, or making sure that your guests have the time of their life.
+            <br><br>
+            We also collaborate with you to design events that support your need through unique, personal face-to-face experiences. We start with lots of questions, and from the answers we receive, we build a foundation of understanding and modelling your event. With our guidance, vision, and experience, we work with you to shape the event and how it should best be delivered.</p>
+        </div>
+    <br><br><br><br>
+
+    <div class="container-fluid pl-5 pr-5">
+        <div class="row">
+             <div class="col-md-6">
+                <img src="images/aboutimg" alt="" width="100%" height="100%">
+            </div>
+            <div class="col-md-6 about text-center"><br><br>
+                <span class="h1  text-uppercase " style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;letter-spacing: 5px;">Mission Statement</span><br><br><br>
+                <p class="text-capitalize h5" style="word-spacing: 5px">marine fleet’s mission is to evaluate, clarify, and improve events based on the strategic value of emotional relationship building of our guests. Through our concepts and sea expertise, we deliver the internal and external reputation of each organization’s unique culture.
+            </div>
+           
+        </div>
+        <section class="section">
+            
+            <div class="container-fluid">
+                <p class="h1 text-uppercase  text-center pt-5">our team</p>
+                    <div class="row column">
+                        
+                    <div class="card col-md-4 col-lg-4 col-xl-5 mr-5 ml-5 ">
+                        <div class="pro-pic" style="background-image: url(images/aboutimg); background-size: cover;background-repeat: no-repeat; background-position-y: 1px;"></div>
+                        <div class="description-wrap">
+                            <div class="description">
+                                <h3>Nabeel sheikh</h3>
+                                <h4>DESIGNING</h4>
+                                <p>I design the website frontend. I also made documentation of the project.</p>
+                                <ul>
+                                    <a href="https://www.facebook.com/nabeel.sheikh.79025648" STY target="_blank" class="social text-light"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/nabeel_sheikh222/" class="social text-light" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                    <div class="card col-md-4 col-lg-4 col-xl-5 ml-5 mr-5 " >
+                        <div class="pro-pic" style="background-image: url(images/askyourself);"></div>
+                        <div class="description-wrap">
+                            <div class="description">
+                                <h3>shayan tauqeer</h3>
+                                <h4>DEVELOPER</h4>
+                                <p>I implement the code. And also get part in documentation.</p>
+                                <ul>
+                                    <a href="https://www.facebook.com/shayan.tauqeer.10" target="_blank" class="social text-light"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/shayan.tauqeer/" class="social text-light" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+             
+        </section>     
+        </section><br>
+  </body>
+</html>

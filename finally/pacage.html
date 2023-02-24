@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <style>
+    
+     .collapse ul{
+        padding-left: 30px;
+        font-size: 25px;
+        font-family:   monospace;
+        transform: translateX(600px);
+       
+    }
+    .con{
+        position: absolute;
+        top: 200px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        word-spacing: 10px;
+        letter-spacing: 5px;
+        color: white;
+    }
+    .con p{
+        font-size: 50px;
+        transform: translateX(550px);
+    }
+    .navbar{
+      background-color:white;
+      
+      
+
+    }
+    @media(max-width:1500px){
+      ul li a{
+        transform: translateX(-200px);
+      }
+
+    }
+    @media(max-width:1300px){
+      ul li a{
+        transform: translateX(-400px);
+      }
+
+    }
+    @media(max-width:1100px){
+      ul li a{
+        transform: translateX(-670px);
+        
+      }
+
+    }
+  
+  
+    ul li{
+        padding-left: 50px;
+         text-transform: capitalize;
+    }
+    ul li a:hover{
+        color: lightblue;
+        
+    }
+    .nav-link::before{
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: lightseagreen;
+      transform-origin:right top ;
+      transform: scale(0,1);
+      transition: color 0.1s, transform 0.2s ease-out;
+
+      
+    }
+    .nav-link:hover::before,
+    .nav-link:focus::before{
+      transform-origin:left top ;
+      transform: scale(1,1) ;
+    }
+   .nav-link{
+    position: relative;
+    transition:  color 0.1s , background-color 0.1s, padding 0.1s ease-in;
+   }
+   
+    
+
+.flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 550px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: beige;
+  color: black;
+  
+}
+
+.flip-card-back {
+  background-color: #1d1e22;
+  color: white;
+  transform: rotateY(180deg);
+}
+.icon{
+	font-size: 100px;
+color: #4973ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.box {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  padding: 20px 50px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  font: 16px/24px Arial, sans-serif;
+  background-color: #4973ff;
+  transition: 
+    box-shadow 0.4s ease, 
+    background-color 0.4s ease, 
+    color 0.4s ease;
+  box-shadow: 
+    0 0 2px 0 rgba(73, 115, 255, .1), 
+    0 0 4px 0 rgba(73, 115, 255, .2), 
+    0 0 6px 0 rgba(73, 115, 255, .3), 
+    0 0 8px 0 rgba(73, 115, 255, .4),
+    0 0 12px 0 rgba(73, 115, 255, .5), 
+    0 0 18px 0 rgba(73, 115, 255, .6);
+}
+
+.box:hover{
+  background-color: #ea3c;
+  box-shadow: 
+    0 0 2px 0 rgba(238, 170, 51, 0.1), 
+    0 0 4px 0 rgba(238, 170, 51, 0.2), 
+    0 0 6px 0 rgba(238, 170, 51, 0.3), 
+    0 0 8px 0 rgba(238, 170, 51, 0.4),
+    0 0 12px 0 rgba(238, 170, 51, 0.5), 
+    0 0 18px 0 rgba(238, 170, 51, 0.6),
+    0 0 4px 0 rgba(238, 170, 51, 0.7);
+}
+
+.box span {
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.box i {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 200px;
+  background-color: inherit;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 
+    transform 0.4s linear, 
+    top 1s linear;
+  overflow: hidden;
+}
+
+.box i:before,
+.box i:after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+.box i:before {
+  border-radius: 46%;
+  background-color: rgba(20, 20, 20, 0.2);
+  animation: animate 5s linear infinite;
+}
+.box i:after {
+  border-radius: 40%;
+  background-color: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: 
+      translate(-50%, -75%) 
+      rotate(0deg);
+  }
+  100% {
+    transform: 
+      translate(-50%, -75%) 
+      rotate(360deg);
+  }
+}
+    .col-md-7 img{
+        filter: brightness(0.6);
+
+    }
+    .content{
+        text-align: center
+        ;font-size: 30px;
+    }
+    .contentss{
+        text-align: center
+        ;font-size: 30px;
+    }
+    @media(max-width:770px){
+  .contentss{order: 2;}
+  .images{order: 1;}
+  .contentss{-ms-flex-order:2;}
+  .images{-ms-flex-order:1;}
+
+  
+}
+   </style>
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-between ">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse topnav-right" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto text-light ">
+          <li class="nav-item active  ">
+            <a class="nav-link"  href="#">about us</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-capitalize"  href="service.html">premium </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              service
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">buying </a>
+              <a class="dropdown-item" href="#">selling</a>
+              
+              <a class="dropdown-item" href="#">charter</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#">book now </a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav> 
+    
+      <img src="images..html/sellignheader.webp" alt="" width="100%" height="500px">
+        <div class="container">
+          <p class="h1 text-capitalize text-center font-italic font-weight-bolder mt-5 mb-5" >our most selling package</p>
+            
+          <div class="row">
+             <div class="col-md-7 imge">
+                  <img src="images..html/selling package.jpg" alt="" width="100%" height=" 100%"  >
+              </div>
+              <div class="col-md-5 content" >
+                    <p ><span style="font-size: 50px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; " class=" h1 font-weight-bolder ">Your Style is Different</span> <br><br><br>
+                        Weekends are meant to be filled with tasty food and good vibes.
+                        <br><br> Live Seafood ~OR~ Live BBQ 🔥 with a View ⛈️ you`re going to experience in a different style.
+                    </p>
+                
+              </div>
+          </div>
+        </div>
+        <div class="container bg-light">
+        <p class="h1 font-italic font-weight-bold text-center text-uppercase mt-5" id="section" ></p>
+        
+        <div class="row ">
+          
+          <div class="col-md-5 contentss">
+            <p > <br>
+              <span  style="font-size: 50px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" class=" h1 font-weight-bolder">&nbsp;High End Luxury Yacht</span> <br><br><br>
+              
+               
+
+                Providing you with the High-End Luxury Yacht with VIP Air Conditioned comfortable seating lounge.
+
+                Life fishing for kids & families, Sunset Sightseeing, Photography by a professional Photographer, high-end sound system with soft music`s playing on background & much more.
+                    </p>
+             
+          </div><div class="col-md-7 images ">
+            <img src="images..html/sell.jpg" alt="" width="100%" height="100%">
+          </div>
+        </div>
+      </div>
+      <div class="container bg-light">
+        <p class="h1 font-italic font-weight-bold text-center text-uppercase mt-5" id="section" ></p>
+        
+        <div class="row ">
+
+        <div class="col-md-7  image ">
+            <img src="images..html/sells.jpg" alt="" width="100%" height="100%">
+          </div>
+          
+          <div class="col-md-5 pl-5 content">
+            <p > <br>
+              <span  style="font-size: 50px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" class=" h1 font-weight-bolder">&nbsp; Yacht Your Birthday with us</span> <br><br><br>
+              
+              Birthday Celebrations you will never forget and moments that will lat a lifetime.
+
+              “Love for all and all for Love”
+              Enjoy your memorable moments with Blissful arrangements at Oceanic Luxury Yacht.  </p>
+             
+          
+        </div>
+      </div></div>
+      <div class="container-fluid bg-light">
+        <p class="h5 font-italic font-weight-bold text-center text-uppercase mt-5 mb-5" id="section1" ><span class="h1">your sea trip tickets</span> <br></p>
+      
+    <div class="row">
+    
+    
+    <div class="flip-card col-sm-10 col-md-6 col-lg-4  col-xl-4 mt-3 ml-3  ml-sm-5   ml-md-0">
+      <div class="flip-card-inner ">
+        <div class="flip-card-front"><br><br>
+        <p class="text-capitalize font-italic font-weight-bolder h2">adults <br> (12 years and above)</p>
+          <p class="text-primary h1">PKR 5000 <br>per person <br><span class="h5 text-capitalize text-dark"> <i class="fa fa-check text-primary" aria-hidden="true"></i> all package details mentioned above </span><br><br><span class="h3 text-capitalize text-black-50">call now for reservations!</span></p>
+        </div>
+        <div class="flip-card-back"><br><br>
+          <h1 class="text-capitalize">for individual</h1> 
+        <i class=" mt-2 fa-solid fa-person-dress icon"></i>
+          
+          <div class="box mt-5">
+        <span class="text-capitalize font-italic">book now </span>
+        <i></i>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="flip-card col-sm-10 col-md-6 col-lg-4  col-xl-4 mt-3 ml-3  ml-sm-5   ml-md-0">
+      <div class="flip-card-inner">
+        <div class="flip-card-front"><br><br>
+          <p class="text-capitalize font-italic font-weight-bolder h2">kids <br> (below 6 years)</p>
+        <p class="text-primary h1 text-uppercase">free<br><br><span class="h5 text-capitalize text-dark"> <i class="fa fa-check text-primary" aria-hidden="true"></i> all package details mentioned above </span><br><br><span class="h3 text-capitalize text-black-50">call now for reservations!</span></p>
+        </div>
+        <div class="flip-card-back"><br><br>
+        <h1 class="text-capitalize">for  kids </h1> 
+        <i class="fa-solid fa-children icon"></i>
+        
+        <div class="box mt-5">
+          <span class="text-capitalize font-italic">book now </span>
+          <i></i>
+        </div>
+        </div>
+      </div>
+      </div>
+      
+      
+      <div class="flip-card col-sm-10 col-md-6 col-lg-4  col-xl-4 mt-3 ml-3  ml-sm-5   ml-md-0">
+      <div class="flip-card-inner">
+        <div class="flip-card-front"><br><br>
+          <p class="text-capitalize font-italic font-weight-bolder h2">kid <br> (age for 6 to 12 years)</p>
+          <p class="text-primary h1">PKR 2500 <br>per person <br><span class="h5 text-capitalize text-dark"> <i class="fa fa-check text-primary" aria-hidden="true"></i> all package details mentioned above </span><br><br><span class="h3 text-capitalize text-black-50">call now for reservations!</span></p>
+        </div>
+        <div class="flip-card-back"><br><br>
+        <h1 class="text-capitalize">for  kid </h1> 
+        <i class="fa-solid fa-child icon"></i>
+        
+        <div class="box mt-5">
+          <span class="text-capitalize font-italic">book now </span>
+          <i></i>
+        </div>
+        </div>
+      </div>
+      </div>
+    
+        
+      <div class="flip-card col-sm-10 col-md-6 col-lg-6  col-xl-6 mt-3 ml-3  ml-sm-5   ml-md-0 ">
+        <div class="flip-card-inner">
+          <div class="flip-card-front"><br><br><br>
+            <p class="text-capitalize font-italic font-weight-bolder h2">dolphins package <br> (for 25 - 30 persons)</p>
+          <p class="text-primary h1 text-uppercase">PKR 4500<br> per person<br><span class="h5 text-capitalize text-dark"> <i class="fa fa-check text-primary" aria-hidden="true"></i> all package details mentioned above </span><br><br><span class="h3 text-capitalize text-black-50">call now for reservations!</span></p>
+          </div>
+          <div class="flip-card-back"><br><br>
+          <h1 class="text-capitalize">for many person </h1> 
+          <i class="fa-solid fa-people-group icon"></i>
+          
+          <div class="box mt-5">
+            <span class="text-capitalize font-italic">book now </span>
+            <i></i>
+          </div>
+          </div>
+        </div>
+        </div>
+        
+        
+        <div class="flip-card col-sm-10 col-md-6 col-lg-6  col-xl-6 mt-3 ml-3  ml-sm-5   ml-md-0  ">
+        <div class="flip-card-inner">
+          <div class="flip-card-front"><br><br><br>
+            <p class="text-capitalize font-italic font-weight-bolder h2">for couples<br> (with 2 kids below 6)</p>
+            <p class="text-primary h1">PKR 1000 <br>per couple <br><span class="h5 text-capitalize text-dark"> <i class="fa fa-check text-primary" aria-hidden="true"></i> all package details mentioned above </span><br><br><span class="h3 text-capitalize text-black-50">call now for reservations!</span></p>
+          </div>
+          <div class="flip-card-back"><br><br>
+          <h1 class="text-capitalize">for couple </h1> 
+          <i class="fa-solid fa-people-carry icon"></i>
+          
+          <div class="box mt-5">
+            <span class="text-capitalize font-italic">book now </span>
+            <i></i>
+          </div>
+          </div>
+        </div>
+        </div>
+        
+      
+    
+    </div>
+    </div>
+
+      
+</body>
+</html>

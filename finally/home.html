@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Optional JavaScript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="j.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <style>
+      
+
+
+    .work{
+        background-color: white;
+        color: black;
+        padding: 10px;
+        justify-content: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 20px ;
+
+    }
+    .work:hover{
+        text-decoration: none;
+        color: white;
+        background-color: black;
+       
+    } 
+
+    body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+ 
+        :root {
+  --scrollcolor: #fff;
+  --scrollbackground: #141e27;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.title {
+  font-size: 2.5rem;
+  font-family: system-ui;
+  line-height: 1.1;
+  font-weight: 300;
+  color: #fff;
+  margin: 4rem auto 1rem;
+  width: 85%;
+  max-width: 1280px;
+}
+
+.slider {
+  width: 85%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.slider__content {
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scrollbar-color: var(--scrollcolor) var(--scrollbackground);
+}
+.slider__content::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 1rem;
+  background: var(--scrollbackground);
+}
+.slider__content::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: var(--scrollcolor);
+}
+.slider__content::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  background: var(--scrollbackground);
+}
+
+.slider__item {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 100%;
+  width: 100%;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 1;
+}
+@media (min-width: 460px) {
+  .slider__item {
+    aspect-ratio: 2/3;
+    min-width: calc((100% / 2) - 2rem);
+  }
+}
+@media (min-width: 940px) {
+  .slider__item {
+    min-width: calc((100% / 3) - 4rem);
+  }
+}
+
+.slider__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider__info {
+  position: relative;
+  padding: 4rem 2rem 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(32, 50, 57, 0));
+}
+.slider__info h2 {
+  color: #fff;
+  font-family: system-ui;
+  line-height: 1.1;
+  font-weight: 300;
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.slider__nav {
+  margin: 1rem 0 4rem;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+@media (min-width: 460px) {
+  .slider__nav {
+    justify-content: flex-end;
+  }
+}
+
+.slider__nav__button {
+  margin: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  border-radius: 2rem;
+  background: #fff;
+  color: #203239;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  pointer-events: none;
+  transition: 0.2s ease-out;
+  opacity: 0.25;
+}
+.slider__nav__button--active {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+  </style>
+
+
+
+  <body>
+    
+    
+<div class="container-fluid " style=" background-color: #313338;" >
+    <div class="row">
+     
+        <div class="col-md-6" data-aos="fade-right"  data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <h1 style="font-family: 'Courier New', Courier, monospace; color: white; text-align: center;">Buying & selling of ships</h1><br>
+            <h5 style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: white;"> The world’s leading design & refit specialists</h5><br>
+           <p style= "font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: white;"> At Setag, we are raising the concept of ‘refit’ to a new level of luxury. It’s not just luxury redefined – it is also luxury refitted and remastered… by the original artists.</p>
+          <a href="#" class="work"> buy now</a>
+    </div>
+    <div class="col-md-6" data-aos="fade-down"  data-aos-easing="linear"data-aos-duration="1200">
+      
+        <img src="images/surf-4.jpg" alt="e" width="100%" height="100%" style="display: flex; margin-top: 20px;">
+    </div>
+
+</div>
+</div><br><br><br>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12" data-aos="fade-up"  >
+      <h1>REMASTERED MARITIME</h1>
+      <h4>Discover the Setag Way</h4>
+      <p>“Boatbuilding is in our blood, offering you the confidence and reassurance that your treasured yacht is in the hands of the experts.” – Chris Gates"</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-5" data-aos="fade-up"  data-aos-duration="3000" style="background-color: #313338;">
+    <div class="row">
+     
+        <div class="col-md-6" data-aos="fade-right"  data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <img src="images/SYT_37595-large.jpg" alt="e" width="100%" height="100%" style="display: flex; margin-top: 20px;">
+            
+    </div>
+    <div class="col-md-6 mt-5" data-aos="fade-down"  data-aos-easing="linear"data-aos-duration="1500" >
+      
+        <h1 style="font-family: 'Courier New', Courier, monospace; color: white; text-align: center;"> <b>ON RENT</b></h1><br>
+            <h5 style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: white;"> Now you can take our yacht on rent for paties </h5><br>
+           <p style= "font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: white;"> Xclusive Yachts - Yacht Rental Dubai, Luxury Yacht Charter
+            Number 1 best yacht rental and boat rental company in karachi. Over 20 yachts to choose from. Enjoy a day out in the sea with your friends and family. Dedicated ..</p>
+          <a href="#" class="work"> check out</a>
+    </div>
+
+</div>
+</div><br><br><br>
+
+<div class="container mt-5" data-aos="fade-up" >
+    <div class="row">
+        <div class="col-md-12">
+      <h1>Detail Design Walkthrough</h1>
+      <h4>Discover the Setag Way</h4>
+      <p>Discover a detailed design overview of our Remastered 2005 Sunseeker 75 by Sarah Luck, our Design Director.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-5" data-aos="fade-up" style="background-color: #313338;">
+    <div class="row">
+     
+        <div class="col-md-6">
+            <h1 style="font-family: 'Courier New', Courier, monospace; color: white; text-align: center;">Want to know about us</h1><br>
+            <h5 style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: white;"> if you want to know about us </h5><br>
+           <p style= "font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: white;"> we are very highly skill worker our contribution in this website will guide you about us and many more to learn about us</p>
+          <a href="#" class="work"> about</a>
+    </div>
+    <div class="col-md-6">
+      
+        <img src="images/about-us-page.png" alt="e" width="70%" height="100%" style="display: flex; margin-top: 20px; margin-left: 100px;">
+    </div>
+
+</div>
+</div><br><br><br>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+      <h1>Detail Design watchout</h1>
+      <h4>Discover the Setag Way</h4>
+      <p>Discover a detailed design overview of our Remastered 2005 Sunseeker 75 by Sarah Luck, our Design Director.</p>
+        </div>
+    </div>
+</div><br><br><br>
+
+
+
+<div class="container-fluid" data-aos="fade-up" style="background-color: #313338;">
+    <div class="row">
+     
+        <div class="col-md-6 ">
+            <img src="images/Contact-us.png" alt="e" width="60%" height="100%" style="display: flex; margin-top: 20px;">
+            <br><br>  
+    </div>
+    <div class="col-md-6 mt-5">
+      
+     <h1 style="font-family: 'Courier New', Courier, monospace; color: white; text-align: center;">Contact us</h1><br>
+            <h5 style=" font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: white;"> Do you want to contact us?</h5><br>
+           <p style= "font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: white;"> you can contact us about any query. we will try to reach out you as soon as possible you can contact us on (instagram , facebook ,twitter) </p>
+          <a href="#" class="work"> contact us</a>
+    </div></div>
+
+</div>
+</div><br><br><br>
+
+
+
+
+    <!-- partial:index.partial.html -->
+    <h1 class="title">Alpine slider</h1>
+    <div class="slider" x-data="{start: true, end: false} " data-aos="fade-up"
+    data-aos-duration="3000">
+      <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+        <div class="slider__item">
+          <img class="slider__image" src="images/Cloud9-Logo.wine.png" alt="Image" width="0%">
+          <div class="slider__info">
+            <h2>CLOUD 9</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="images/attachment_79178671.png" alt="Image">
+          <div class="slider__info">
+            <h2>PROJECT X</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="images/infinity-yacht-logo-design-03.png" alt="Image">
+          <div class="slider__info">
+            <h2>ILLUSION +</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="images/vintage-luxury-boat-ship-symbol-logo-design_284881-189.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>SEA WALK</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="images/1024px-BAVARIA-YACHTS_Logo.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>PHONIX 2</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="images/attachment_49851278.jpeg" alt="Image">
+          <div class="slider__info">
+            <h2>AURORA</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="images/princess-yachts-logo.png" alt="Image">
+          <div class="slider__info">
+            <h2>FAITH</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img class="slider__image" src="images/fraser1_logo-1140x775.jpg" alt="Image">
+          <div class="slider__info">
+            <h2>MOONNIGHT ||</h2>
+          </div>
+        </div>
+        
+      </div>
+      <div class="slider__nav">
+        <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+        <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+      </div>
+    </div>
+    <!-- partial -->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js'></script><script  src="./script.js"></script>
+
+
+<!-- Site footer -->
+<footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+            <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+            <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+            <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+            <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="http://scanfcode.com/about/">About Us</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+       <a href="#">Scanfcode</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+<script>
+  AOS.init();
+</script>
+    </body>
+</html>

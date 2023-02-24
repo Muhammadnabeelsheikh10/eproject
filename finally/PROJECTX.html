@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+  
+
+#exTab1 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+#exTab2 h3 {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+/* remove border radius for the tab */
+.nav-pills{
+  width: 100%;
+}
+
+
+#exTab1 .nav-pills > li > a {
+  border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+#exTab3 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+  padding-left: 50PX;
+  color: #ccc;
+  text-align: center;
+
+  
+}
+@media(max-width:900px){
+  .nav-pills{
+    padding-left: 1px;
+  }
+}
+#exTab3 .tab-content {
+  
+  color:white;
+  padding : 5px 15px;
+  padding-left: 20PX;
+}
+#slideshow img{
+  position: absolute;
+  top: 10em;
+  left: 0;
+  width: 100%;
+}
+
+
+
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align:center;
+  height: 10em;
+  padding: 2em;
+}
+  .tabcontent h1{
+    text-decoration: underline 5px  #3844ae;
+    text-transform: uppercase;
+    font-family: fantasy;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    
+  }
+  .tabcontent span{
+    font-weight: 900;
+
+    font-size: 21px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #313338;
+  font-family: monospace;
+  width: 100%;
+
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 20px;
+  transform: translateX(500px);
+  padding-left: 20px;
+  
+  color: #fcefe9 !important;
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+  padding-left:10px;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+ body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: white;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo{
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+/*navabr*/
+
+
+.nav-item{
+  margin-left: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+}
+.navbar-nav{
+  margin-left: 300px;
+}
+.one:hover{
+
+  border-bottom: 3px solid #3844ae;
+}
+@media(max-width:1100px){
+  .navbar-nav{
+    margin-left: 200px;
+  }
+}
+@media(max-width:990px){
+  .navbar-nav{
+    margin-left: 0px;
+    
+    
+  }
+  .nav-item:hover{
+    border-bottom: none;
+  }
+}
+/*navbar end*/
+
+.three a:hover{
+  background-color: #428bca;
+  color: #3844ae;
+  text-align: center;
+}
+button {
+ position: relative;
+ padding: 1em 1.8em;
+ outline: none;
+ border: 1px solid #3844ae;
+ background: #313338;
+ color: #428bca;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ font-size: 15px;
+ overflow: hidden;
+ transition: 0.2s;
+ border-radius: 20px;
+ cursor: pointer;
+ font-weight: bold;
+}
+
+button:hover {
+ box-shadow: 0 0 10px #001eff, 0 0 25px #428bca, 0 0 50px #3844ae;
+ transition-delay: 0.6s;
+}
+
+button span {
+ position: absolute;
+}
+
+button span:nth-child(1) {
+ top: 0;
+ left: -100%;
+ width: 100%;
+ height: 2px;
+ background: linear-gradient(90deg, transparent, #ae00ff);
+}
+
+button:hover span:nth-child(1) {
+ left: 100%;
+ transition: 0.7s;
+}
+
+button span:nth-child(3) {
+ bottom: 0;
+ right: -100%;
+ width: 100%;
+ height: 2px;
+ background: linear-gradient(90deg, transparent, #001eff);
+}
+
+button:hover span:nth-child(3) {
+ right: 100%;
+ transition: 0.7s;
+ transition-delay: 0.35s;
+}
+
+button span:nth-child(2) {
+ top: -100%;
+ right: 0;
+ width: 2px;
+ height: 100%;
+ background: linear-gradient(180deg, transparent, #ae00ff);
+}
+
+button:hover span:nth-child(2) {
+ top: 100%;
+ transition: 0.7s;
+ transition-delay: 0.17s;
+}
+
+button span:nth-child(4) {
+ bottom: -100%;
+ left: 0;
+ width: 2px;
+ height: 100%;
+ background: linear-gradient(360deg, transparent, #001eff);
+}
+
+button:hover span:nth-child(4) {
+ bottom: 100%;
+ transition: 0.7s;
+ transition-delay: 0.52s;
+}
+
+button:active {
+ background: #ae00af;
+ background: linear-gradient(to top right, #ae00af, #001eff);
+ color: #bfbfbf;
+ box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+ transition: 0.1s;
+}
+
+button:active span:nth-child(1) 
+span:nth-child(2) 
+span:nth-child(2) 
+span:nth-child(2) {
+ transition: none;
+ transition-delay: none;
+}
+
+
+</style>
+</head>
+<body>
+  <!--navbar start-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item one">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item one">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item dropdown one">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu text-uppercase" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">buy</a>
+            <a class="dropdown-item" href="#">sell</a>
+           
+            <a class="dropdown-item" href="#">charter</a>
+          </div>
+        </li>
+        <li class="nav-item one">
+          <a class="nav-link " href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav> <br><br>
+   <!--navbar end-->
+  <h1 style="text-align:center; font-family: Georgia, 'Times New Roman', Times, serif; " class="text-uppercase" >PROJECT X</h1>
+
+  <div class="container">
+    <div class="mySlides">
+      <div class="numbertext">1 / 3</div>
+      <img src="images..html/buy/projectx1.jpg" style="width:100%" height="465px">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 3</div>
+      <img src="images..html/buy/projecrx2.jpg" style="width:100%" height="465px">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 3</div>
+      <img src="images..html/buy/projectx3.png" style="width:100%" height="465px">
+    </div>
+   
+    
+      
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <div class="row">
+      <div class="column  col-4 col-md-4 col-sm-4">
+        <img class="demo cursor" src="images..html/buy/projectx1.jpg" style="width:103%; height:150px; " onclick="currentSlide(1)" alt="">
+      </div>
+      <div class="column col-md-4 col-4 col-sm-4">
+        <img class="demo cursor" src="images..html/buy/projecrx2.jpg" style="width:103%; height:150px" onclick="currentSlide(2)" alt="">
+      </div>
+      <div class="column col-md-4 col-sm-4 col-4">
+        <img class="demo cursor" src="images..html/buy/projectx3.png" style="width:106%;height:150px; " onclick="currentSlide(3)" alt="">
+      </div>
+        
+      
+    </div>
+  </div>
+  <div class="container">
+    <div class="row"><div class="col-md-12">
+      <p class="text-uppercase h2 text-center mt-5" style="word-spacing: 10px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">393'9 / 120m    |    staterooms: 18   | eur 155,000,000 <br><br></p>
+   
+    </div></div>
+  </div>
+  <div class="container-fluid">
+    <div class="row"><div class="col-md-2 m-auto">
+        <button>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> buy now
+          </button>
+        </div></div>
+  </div>
+  
+<br><br>
+  
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">ABOUT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">SPECIFICATIONS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">HISTORY</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active bg-dark" style="padding: 20px; color: white;" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"><br><br>
+      <h1>About project x</h1>
+      <br><br>
+      <span>Welcome to the world of superyacht PROJECT X. Combining the very latest in design, technology and style with the highest standards in quality, service and entertainment, this brand new yacht has been built to turn heads. 
+
+      </span>
+      <br><br>
+      <p>
+        She is the latest masterpiece to emerge from Golden Yachts and Ken Freivokh with a design carefully and meticulously penned by Massari Design studio with significant input from her owner to create the ultimate luxury yacht charter. 
+
+        An interior flooded with natural light, redefines the connection with your surroundings and nowhere is this better expressed than in her uniquely impressive glass elevator and atrium. Other alluring features include a large private owner's deck with jacuzzi and sun lounging terrace and sensational views through full-height windows in the master suite and lounges. The main deck is home to a large pool on the aft deck with vast sun bathing facilities and bar.
+        
+        PROJECT X accommodates up to 12 guests in nine guest cabins, each with their own colour scheme. Additionally, on board a corporate yacht charter guests can enjoy the impressive full beam office/ conference room with separate PA/ secretary facilities on upper deck forward. Complete with panoramic views, active charter guests can make the most of the unique enclosed gym on sun deck with day room and direct access to large jacuzzi area and sun pads. 
+        
+        Steps lead down to a large and welcoming beach club with sauna, hammam and massage/beauty room. It also features a seating area, a bar and TV entertainment area.
+        
+        Guests on board a private yacht charter on PROJECT X can also enjoy exclusive use of the 10m Onda Limousine tender and the impressive 9m Pedrazzini Vivalle classic tender.
+    </p> </div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+      <div class="container-fluid bg-dark text-light p-5 ">
+        <div class="row">
+            <div class="col-md-6">
+                <span class="h3 text-uppercase">accommodation</span><br><br>
+                <p class="text-capitalize h6">guests :  12<br><br>
+                staterooms : 9 (7 × double, 2 × twin, 1 × additional berths)<br> <br>
+                crew : 28 </p>
+    
+            </div>
+            <div class="col-md-6">
+                <span class="h3 text-uppercase">CONSTRUCTION & DESIGN</span><br><br>
+                <p class="text-capitalize h6 ">BUILT : 2022<br><br>
+                BUILDER : West Mediterranean<br> <br>
+                EXTERIOR DESIGNER : Caribbean<br><br>
+                INTERIOR DESIGNER : Caribbean
+             </p>
+    
+            </div>
+          
+            <div class="col-md-6"><br><br><br><br>
+                <span class="h3 text-uppercase">DIMENSIONS & MATERIALS</span><br><br>
+                <p class="text-uppercase h6 "> length :88m (288.6ft)<br><br>
+                    BEAM : 14.8m (48.6ft)
+
+                    <br> <br>
+                    DRAFT :4.5m (14.8ft)
+                    <br><br>
+                    GROSS TONNAGE :2,973
+             </p>
+    
+            </div>
+            <div class="col-md-6"><br><br><br><br>
+                <span class="h3 text-uppercase">PERFORMANCE & ENGINES</span><br><br>
+                <p class="text-uppercase h6 "> CRUISING SPEED : 18 knots <br><br>
+                    MAX SPEED :18 knots<br> <br>
+                    CRUISE RANGE : 12.5 knots <br><br>
+                    ENGINES : 2 × 2,510hp Caterpillar
+             </p>
+    
+            </div>
+        </div>
+  
+    </div></div>
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+      <div class="container-fluid bg-dark text-light p-5 "><br><br>
+      <p>She was the first ship built by Blohm & Voss post WWII in 1955, Germany gave special attention to this vessel as she was considered the Pride of Germany, No expense was spared and the builders were truly masters of their art, it had a major retrofit in 1960. </p>  </div>
+  </div></div>
+
+
+
+
+  <!--slider-->
+ <div class="container">
+<div id="slideshow">
+    <img src="SA.jpeg" width="100%" height="70%">
+    <img src="SAASASAS.jpeg" width="100%" height="70%">
+    <img src="SASA.jpeg" width="100%" height="70%">
+    <img src="YACHT.jpeg" width="100%" height="70%">
+  </div>
+ </div> <br><br>
+
+
+
+<!--
+ <div class="container bg-dark text-light p-5 ">
+    <div class="row">
+        <div class="col-md-6">
+            <span class="h3 text-uppercase">accommodation</span><br><br>
+            <p class="text-capitalize h6">guests : 10 <br><br>
+            staterooms : 5 (3 × double, 2 × twin) <br> <br>
+            crew : 6 </p>
+
+        </div>
+        <div class="col-md-6">
+            <span class="h3 text-uppercase">CONSTRUCTION & DESIGN</span><br><br>
+            <p class="text-capitalize h6 ">BUILT : 2023 <br><br>
+            BUILDER : Azimut, Italy <br> <br>
+            EXTERIOR DESIGNER : Alberto Mancini <br><br>
+            INTERIOR DESIGNER : Achille Salvagni
+         </p>
+
+        </div>
+      
+        <div class="col-md-6"><br><br><br><br>
+            <span class="h3 text-uppercase">DIMENSIONS & MATERIALS</span><br><br>
+            <p class="text-uppercase h6 "> length : 37.6m (123.3ft) <br><br>
+                BEAM : 7.9m (25.9ft)<br> <br>
+                DRAFT : 1.8m (5.9ft) <br><br>
+                GROSS TONNAGE : 299
+         </p>
+
+        </div>
+        <div class="col-md-6"><br><br><br><br>
+            <span class="h3 text-uppercase">PERFORMANCE & ENGINES</span><br><br>
+            <p class="text-uppercase h6 "> CRUISING SPEED : 20 knots <br><br>
+                MAX SPEED : 23.5 knots<br> <br>
+                CRUISE RANGE : 1,650 nm <br><br>
+                ENGINES : 2 × 2,600hp MTU
+         </p>
+
+        </div>
+    </div>
+ </div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script>
+  
+    var duration = 20; // duration in seconds
+var fadeAmount = 0.3; // fade duration amount relative to the time the image is visible
+
+$(document).ready(function (){
+  var images = $("#slideshow img");
+  var numImages = images.size();
+  var durationMs = duration * 1000;
+  var imageTime = durationMs / numImages; // time the image is visible 
+  var fadeTime = imageTime * fadeAmount; // time for cross fading
+  var visibleTime = imageTime  - (imageTime * fadeAmount * 2);// time the image is visible with opacity == 1
+  var animDelay = visibleTime * (numImages - 1) + fadeTime * (numImages - 2); // animation delay/offset for a single image 
+  
+  images.each( function( index, element ){
+    if(index != 0){
+      $(element).css("opacity","0");
+      setTimeout(function(){
+        doAnimationLoop(element,fadeTime, visibleTime, fadeTime, animDelay);
+      },visibleTime*index + fadeTime*(index-1));
+    }else{
+      setTimeout(function(){
+        $(element).animate({opacity:0},fadeTime, function(){
+          setTimeout(function(){
+            doAnimationLoop(element,fadeTime, visibleTime, fadeTime, animDelay);
+          },animDelay )
+        });
+      },visibleTime);
+    }
+  });
+});
+
+// creates a animation loop
+function doAnimationLoop(element, fadeInTime, visibleTime, fadeOutTime, pauseTime){
+  fadeInOut(element,fadeInTime, visibleTime, fadeOutTime ,function(){
+    setTimeout(function(){
+      doAnimationLoop(element, fadeInTime, visibleTime, fadeOutTime, pauseTime);
+    },pauseTime);
+  });
+}
+
+// shorthand for in- and out-fading
+function fadeInOut( element, fadeIn, visible, fadeOut, onComplete){
+  return $(element).animate( {opacity:1}, fadeIn ).delay( visible ).animate( {opacity:0}, fadeOut, onComplete);
+}
+
+
+
+
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+</html>
+

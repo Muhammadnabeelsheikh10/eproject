@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>SERVICES</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <style>
+     .collapse ul{
+        padding-left: 30px;
+        font-size: 25px;
+        font-family:   monospace;
+        transform: translateX(600px);
+       
+    }
+    header img{
+        filter: brightness();
+        position: relative;
+    }
+    .con{
+        position: absolute;
+        top: 200px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        word-spacing: 10px;
+        letter-spacing: 5px;
+        color: white;
+    }
+    .con p{
+        font-size: 50px;
+        transform: translateX(550px);
+    }
+    .navbar{
+      background-color:white;
+      
+      
+
+    }
+    @media(max-width:1400px){
+      ul li a{
+        transform: translateX(-200px);
+      }
+
+    }
+    @media(max-width:1200px){
+      ul li a{
+        transform: translateX(-400px);
+      }
+
+    }
+    @media(max-width:1000px){
+      ul li a{
+        transform: translateX(-670px);
+        
+      }
+
+    }
+  
+  
+    ul li{
+        padding-left: 50px;
+         text-transform: capitalize;
+    }
+    ul li a:hover{
+        color: lightblue;
+        
+    }
+    .nav-link::before{
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: lightseagreen;
+      transform-origin:right top ;
+      transform: scale(0,1);
+      transition: color 0.1s, transform 0.2s ease-out;
+
+      
+    }
+    .nav-link:hover::before,
+    .nav-link:focus::before{
+      transform-origin:left top ;
+      transform: scale(1,1) ;
+    }
+   .nav-link{
+    position: relative;
+    transition:  color 0.1s , background-color 0.1s, padding 0.1s ease-in;
+   }
+   
+    .content{
+        background-color:#313338;
+        color: white;
+        
+    }
+    .content span{
+        font-family: pupgrus;
+        text-decoration: underline orange;
+    }
+    .dot{
+        font-size: 50px;
+        color: orange;
+        text-align: center;
+        
+    }
+    .expertise{
+        font-size: 70px;
+        font-family: pupgrus;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    
+    .service{
+        font-size: 40px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
+    .padding{
+        padding-left: 50px;
+        padding-top: 100px;
+    }
+    .paddings{
+        padding-left: 50px;
+        padding-top: 100px;
+    }
+    .col-md-2 i{
+        padding-top: 80px;
+        font-size: 90px;
+        color: lightseagreen;
+    }
+    .col-md-8{
+        margin-left: 40px;
+    }
+    @media (max-width:1200px) {
+        .image{
+            height: 500px;
+            width: 90%;
+            margin-left: 50px;
+        }
+        
+    }
+    @media (max-width:576px) {
+        .image{
+            margin-left:35px ;
+            
+        }
+    }
+    @media (max-width:770px){
+        .img{order: 1;}
+        .paddings{order: 2;}
+
+    } 
+
+ 
+    </style>
+</head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-between ">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse topnav-right" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto text-light ">
+            <li class="nav-item  ">
+              <a class="nav-link"  href="#">home </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-capitalize"  href="service.html">service <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">Disabled</a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav> 
+      <header>
+        <img src="header.webp" alt="" width="100%" height="400px">
+        <div class="con">
+            <p class=" text-uppercase font-italic">our service</p>
+        </div>
+    </header>
+      
+    <div class="container-fluid mt-5 ">
+        <p class="h4 text-black font-italic text-center text-capitalize">we don't want to push ideas on to customers, we simply want to make what you want </p>
+ <div class="row">
+    <div class="col-md-6 mt-5 ">
+        <img src="service 1.jpg" alt="" width="100%">
+        <div class="content pb-5 text-center"><br>
+            <span class="h1  text-capitalize font-weight-bolder font-italic ">cruise <br><br></span>
+            <p class="h5 font-italic text-capitalize">
+                Let us make your special day unforgettable at Oceanic Luxury Yachts by hosting your private events with entertainment .</p>
+        </div>
+    </div>
+    <div class="col-md-6 mt-5">
+        <img src="service2.jpg" alt="" width="100%">
+        <div class="content pb-5 text-center"><br>
+            <span class="h1  text-capitalize font-weight-bolder font-italic"> corporate events<br><br></span>
+            <p class="h5 font-italic text-capitalize">
+                Your 2021 targets are on high-note and we  are excited to celebrate your team`s achievements this season
+            </p>   
+         </div>
+    </div>
+    <div class="col-md-6 mt-5 ">
+        <img src="service 3.jpg" alt="" width="100%" >
+        <div class="content pb-5 text-center"><br>
+            <span class="h1  text-capitalize font-weight-bolder font-italic">beach huts<br><br></span>
+            <p class="h5 font-italic text-capitalize">
+                The sea brings you drama, excitement, passion and thrill all at the Oceanic World of events.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-6 mt-5 ">
+        <img src="service4.webp" alt="" width="100%" >
+        <div class="content pb-5 text-center"><br>
+            <span class="h1  text-capitalize font-weight-bolder font-italic">Water sports<br><br></span>
+            <p class="h5 font-italic text-capitalize">
+                The beach provide us many ways of having fun by letting us surfing on motorboats and Jet Skies.
+            </p>        </div>
+    </div>
+ </div>   
+</div>  
+<div class="container">
+    <p class="h1 expertise text-uppercase text-center  ">our expertise</p>
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-xl-6 imge">
+            <img src="expertise.jpeg" class="image" alt="" width="100%" height="100%">
+        </div>
+        <div class="col-md-12 col-lg-12 col-xl-6 padding">
+       
+            <div class="row">
+                <div class="col-md-2">
+                    <i class="fa-sharp fa-regular fa-square-check"></i>
+                </div>
+                <div class="col-md-8">
+                    <span class="service">FULL-SERVICE PLANNING AND EXECUTION</span>
+                    <p>
+                        We can develop goals, select a venue, plan exercises and games, choose a menu, find the perfect speakers, organize awards ceremonies, create presentations, arrange for live entertainment, and more.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <i class="fa-sharp fa-solid fa-cubes"></i>
+                </div>
+                <div class="col-md-8">
+                    <span class="service">ALL LUXURY FACILITIES</span>
+                    <p class="">
+                        Oceanic venues have set today’s high-level standard in sea excursion, beach activities, seawater adventure sports, destination weddings, and day life, all with a focus on service, design, and innovation. Our goal is to create memorable and one-of-a-kind experiences for our guests.
+        
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    
+    <div class="row">
+        
+        <div class="col-md-12  col-lg-12 col-xl-6 paddings">
+       
+            <div class="row">
+                <div class="col-md-2">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+                <div class="col-md-8">
+                    <span class="service">TEAM BUILDING</span>
+                    <p>
+                        A team building event is your answer. A team building event is a great way to build company culture or to kickstart the process of new initiatives. Whether you’re interested in an event that lasts a few hours or even a few days, we can create an experience where your people can get to know one another outside the office, strengthen their teamwork skills, and have a great time.
+                    </p>
+                </div>
+            </div><br><br>
+            <div class="row">
+                <div class="col-md-2">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class="col-md-8">
+                    <span class="service">THE POWER OF PLAY</span>
+                    <p class="">
+                        In a world focused on making the client happy, businesses often forget to focus on their most valued assets—their people who make the business grow. Done right, it’s amazing what an afternoon of playing together can do to break down walls, strengthen relationships, and create successes! That’s where team building comes.
+        
+                    </p>
+                </div>
+            </div>
+
+        </div><div class="col-md-12 col-xl-6 col-lg-12 mt-5 img">
+            <img src="management.jpg" class="image" alt="" width="100%" height="100%">
+        </div>
+    </div>
+</div>
+</body>
+</html>
